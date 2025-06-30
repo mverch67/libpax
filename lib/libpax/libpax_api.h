@@ -8,32 +8,32 @@
 // #define LIBPAX_WIFI // enables WiFi sniffing features in build 
 // #define LIBPAX_BLE  // enables BLE sniffing features in build
 
-#define WIFI_CHANNEL_ALL    0b1111111111111
-#define WIFI_CHANNEL_1      0b0000000000001
-#define WIFI_CHANNEL_2      0b0000000000010
-#define WIFI_CHANNEL_3      0b0000000000100
-#define WIFI_CHANNEL_4      0b0000000001000
-#define WIFI_CHANNEL_5      0b0000000010000
-#define WIFI_CHANNEL_6      0b0000000100000
-#define WIFI_CHANNEL_7      0b0000001000000
-#define WIFI_CHANNEL_8      0b0000010000000
-#define WIFI_CHANNEL_9      0b0000100000000
-#define WIFI_CHANNEL_10     0b0001000000000
-#define WIFI_CHANNEL_11     0b0010000000000
-#define WIFI_CHANNEL_12     0b0100000000000
-#define WIFI_CHANNEL_13     0b1000000000000
+#define LIBPAX_WIFI_CHANNEL_ALL    0b1111111111111
+#define LIBPAX_WIFI_CHANNEL_1      0b0000000000001
+#define LIBPAX_WIFI_CHANNEL_2      0b0000000000010
+#define LIBPAX_WIFI_CHANNEL_3      0b0000000000100
+#define LIBPAX_WIFI_CHANNEL_4      0b0000000001000
+#define LIBPAX_WIFI_CHANNEL_5      0b0000000010000
+#define LIBPAX_WIFI_CHANNEL_6      0b0000000100000
+#define LIBPAX_WIFI_CHANNEL_7      0b0000001000000
+#define LIBPAX_WIFI_CHANNEL_8      0b0000010000000
+#define LIBPAX_WIFI_CHANNEL_9      0b0000100000000
+#define LIBPAX_WIFI_CHANNEL_10     0b0001000000000
+#define LIBPAX_WIFI_CHANNEL_11     0b0010000000000
+#define LIBPAX_WIFI_CHANNEL_12     0b0100000000000
+#define LIBPAX_WIFI_CHANNEL_13     0b1000000000000
 
 #define LIBPAX_ERROR_WIFI_NOT_AVAILABLE 0b00000001
 #define LIBPAX_ERROR_BLE_NOT_AVAILABLE  0b00000010
 
 // configuration given to lib for sniffing parameters
 struct libpax_config_t {
-    uint16_t wifi_channel_map;              // bit map which channel to cycle through
+    uint16_t LIBPAX_WIFI_CHANNEL_map;              // bit map which channel to cycle through
                                             // <-  13 ..........1 ->
                                             //    0b1010000001001 would be Channel: 1, 4, 11, 13
     uint8_t wificounter;                    // set to 0 if you do not want to install the WiFi sniffer
     uint8_t wifi_my_country;                // e.g 0 = "EU", etc. select locale for WiFi RF settings
-    uint16_t wifi_channel_switch_interval;  // [seconds/100] -> 0,5 sec.
+    uint16_t LIBPAX_WIFI_CHANNEL_switch_interval;  // [seconds/100] -> 0,5 sec.
     int wifi_rssi_threshold;                // Filter for how strong the wifi signal should be to be counted
     int ble_rssi_threshold;                 // Filter for how strong the bluetooth signal should be to be counted
     uint8_t blecounter;                     // set to 0 if you do not want to install the BLE sniffer
